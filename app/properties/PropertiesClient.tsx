@@ -1,7 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { SafeReservation, SafeUser } from "../types";
+import { SafeListing, SafeUser } from "../types";
 import { useCallback, useState } from "react";
 import ListingCard from "../components/listings/ListingCard";
 import Container from "../components/Container";
@@ -10,14 +10,11 @@ import axios from "axios";
 import toast from "react-hot-toast";
 
 interface TripsClientProps {
-  reservations: SafeReservation[];
+  listings: SafeListing[];
   currentUser?: SafeUser | null;
 }
 
-const TripsClient: React.FC<TripsClientProps> = ({
-  reservations,
-  currentUser,
-}) => {
+const TripsClient: React.FC<TripsClientProps> = ({ listings, currentUser }) => {
   const router = useRouter();
   const [deletingId, setDeletingId] = useState("");
   const onCancel = useCallback(
@@ -59,7 +56,7 @@ const TripsClient: React.FC<TripsClientProps> = ({
           gap-8
         "
       >
-        {reservations.map((reservation: any) => (
+        {listings.map((reservation: any) => (
           <ListingCard
             key={reservation.id}
             data={reservation.listing}
