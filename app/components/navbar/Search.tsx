@@ -24,7 +24,7 @@ const Search = () => {
     }
 
     return "Explore";
-  }, [getByValue, locationValue]);
+  }, [locationValue, getByValue]);
 
   // get the duration label on the navigation
   const durationLable = useMemo(() => {
