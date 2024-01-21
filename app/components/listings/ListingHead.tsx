@@ -22,9 +22,9 @@ const ListingHead: React.FC<ListingHeadProps> = ({
   id,
   currentUser,
 }) => {
-  const { getByValue } = useCountries();
+  const { getByValues } = useCountries();
 
-  const location = getByValue(locationValue);
+  const location = getByValues(locationValue);
 
   return (
     <>
