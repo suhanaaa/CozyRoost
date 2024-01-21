@@ -10,7 +10,7 @@ import { BiSearch } from "react-icons/bi";
 const Search = () => {
   const searchModal = useSearchModal();
   const params = useSearchParams();
-  const { getByValues } = useCountries();
+  const { getByValue } = useCountries();
 
   const locationValue = params?.get("locationValue");
   const startDate = params?.get("startDate");
@@ -20,11 +20,11 @@ const Search = () => {
   // get the location label on the navigation
   const locationLable = useMemo(() => {
     if (locationValue) {
-      return getByValues(locationValue as string)?.label;
+      return getByValue(locationValue as string)?.label;
     }
 
     return "Explore";
-  }, [getByValues, locationValue]);
+  }, [getByValue, locationValue]);
 
   // get the duration label on the navigation
   const durationLable = useMemo(() => {
