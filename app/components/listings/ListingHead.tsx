@@ -22,8 +22,9 @@ const ListingHead: React.FC<ListingHeadProps> = ({
   id,
   currentUser,
 }) => {
-  const { getByValues } = useCountries();
-  const location = getByValues(locationValue);
+  const { getByValue } = useCountries();
+
+  const location = getByValue(locationValue);
 
   return (
     <>
@@ -36,7 +37,7 @@ const ListingHead: React.FC<ListingHeadProps> = ({
           className="
             w-full
             h-[60vh]
-            overflow-hidden 
+            overflow-hidden
             rounded-xl
             relative
           "

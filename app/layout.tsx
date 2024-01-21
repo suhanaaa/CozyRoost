@@ -10,13 +10,12 @@ import LoginModal from "./components/modals/LoginModal";
 import getCurrentUser from "./actions/getCurrentUser";
 import RentModal from "./components/modals/RentModal";
 import SearchModal from "./components/modals/SearchModal";
-import Head from "next/head";
 
 const font = Montserrat({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "CozyRoost",
-  description: "Your haven away from home, where comfort meets convenience.",
+  description: "Your heaven away from home, where comfort meets convenience.",
 };
 
 export default async function RootLayout({

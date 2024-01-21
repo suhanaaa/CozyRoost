@@ -41,9 +41,14 @@ const Categories = () => {
       {/* Sidebar with categories */}
       {isSidebarOpen && (
         <div className="fixed left-0 z-10 top-0 h-screen bg-white w-64 shadow-lg p-4 overflow-y-auto">
-          <button className="absolute top-2 right-2" onClick={closeSidebar}>
-            <AiOutlineClose size={24} color="gray" />
-          </button>
+          <div className="flex flex-row">
+            <span className="pl-12 cursor-pointer font-extrabold text-2xl text-accent">
+              CozyRoost
+            </span>
+            <button className="absolute top-2 right-2" onClick={closeSidebar}>
+              <AiOutlineClose size={24} color="gray" />
+            </button>
+          </div>
 
           <Container>
             <div className="flex pt-6 flex-col items-start">
