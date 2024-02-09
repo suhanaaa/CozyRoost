@@ -1,4 +1,4 @@
-//for authentication in next.s
+//for authentication in next.js
 
 //PrismaAdapter is used to connect NextAuth to a Prisma database
 import { PrismaAdapter } from "@next-auth/prisma-adapter";
